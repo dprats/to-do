@@ -5,6 +5,7 @@
 var utils = require('../utils');
 var mongoose = require('mongoose');
 var Todo = mongoose.model('Todo');
+
 exports.index = function ( req, res, next ){
   var user_id = req.cookies ?
     req.cookies.user_id : undefined;

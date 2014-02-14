@@ -38,7 +38,7 @@ if ('development' == app.get('env')) {
 //ROUTES
 
 app.get('/', routes.index);
-app.get('/create', routes.create);
+app.post('/create', routes.create);
 app.get('/destroy:id', routes.destroy);
 app.get('/edit/:id', routes.edit);
 app.post('/update/:id', routes.update);

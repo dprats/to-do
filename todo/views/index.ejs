@@ -1,10 +1,19 @@
 <%  layout ('layout') -%>
 
+
 <h1><%= title %></h1>
 <form action="/create" method="post" accept-charset="utf-8">
 	<input type="text" name="content">
 </form>
 
 <% todos.forEach (function ( todo ){ %>
-		<p><%= todo.content %></p>
+		<p>
+			<span>
+				<a href="/edit/<%= todo._id %>" title="update this item"><%= todo.content %>
+				</a>
+			</span>
+			<span>
+				<a href="/destroy<%= todo._id %>" title= "Delete this item"> Delete</a>
+			</span>
+		</p>
 		<% }); %>
